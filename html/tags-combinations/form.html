@@ -14,11 +14,61 @@
         </legend>
         <p>
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            autocomplete="name"
+            autofocus
+            required
+          />
         </p>
         <p>
           <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Email" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="email"
+            required
+          />
+        </p>
+        <p>
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            min="1"
+            max="99"
+            placeholder="Age"
+            autocomplete="sex"
+            required
+          />
+        </p>
+        <p>
+          <label for="sex">Sex:</label>
+          <select id="sex" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </p>
+        <p>
+          Preferred communication mean:
+          <input
+            type="radio"
+            id="preferred-communication-mean_email"
+            name="preferred-communication-mean"
+            value="email"
+            checked
+          />
+          <label for="preferred-communication-mean">Email</label>
+          <input
+            type="radio"
+            id="preferred-communication-mean_phone"
+            name="preferred-communication-mean"
+            value="phone"
+          />
+          <label for="preferred-communication-mean_phone">Phone</label>
         </p>
       </fieldset>
       <fieldset>
@@ -27,7 +77,13 @@
         </legend>
         <p>
           <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            autocomplete="new-password"
+            required
+          />
         </p>
         <p>
           <label for="password-confirmation">Password confirmation:</label>
@@ -35,13 +91,19 @@
             type="password"
             id="password-confirmation"
             placeholder="Password confirmation"
+            autocomplete="new-password"
+            required
           />
         </p>
       </fieldset>
-      <p>
-        <input type="reset" value="Reset" />
-        <input type="submit" value="Sign up" />
-      </p>
+      <div>
+        <button type="reset" value="Reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+      <div>
+        <input type="checkbox" id="terms" required />
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
     </form>
   </body>
 </html>
