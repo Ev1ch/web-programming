@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <form method="post">
+      <fieldset>
+        <legend>
+          <h2>Basic information</h2>
+        </legend>
+        <p>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Name" />
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Email" />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h2>Confidential information</h2>
+        </legend>
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Password" />
+        </p>
+        <p>
+          <label for="password-confirmation">Password confirmation:</label>
+          <input
+            type="password"
+            id="password-confirmation"
+            placeholder="Password confirmation"
+          />
+        </p>
+      </fieldset>
+      <p>
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Sign up" />
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+  </head>
+
+  <body>
+    <h1>Canvas</h1>
+
+    <section>
+      <h2>Drawing a Rectangle</h2>
+      <canvas id="canvas1" width="300" height="150"></canvas>
+    </section>
+
+    <section>
+      <h2>Drawing a Circle</h2>
+      <canvas id="canvas2" width="300" height="150"></canvas>
+    </section>
+
+    <section>
+      <h2>Drawing Lines</h2>
+      <canvas id="canvas3" width="300" height="150"></canvas>
+    </section>
+
+    <section>
+      <h2>Interactive Drawing</h2>
+      <canvas id="canvas4" width="300" height="150"></canvas>
+    </section>
+
+    <script>
+      const canvas1 = document.getElementById('canvas1');
+      const canvas2 = document.getElementById('canvas2');
+      const canvas3 = document.getElementById('canvas3');
+      const canvas4 = document.getElementById('canvas4');
+
+      if (canvas1.getContext) {
+        const ctx1 = canvas1.getContext('2d');
+        ctx1.fillStyle = 'blue';
+        ctx1.fillRect(50, 25, 200, 100);
+      }
+
+      if (canvas2.getContext) {
+        const ctx2 = canvas2.getContext('2d');
+        ctx2.fillStyle = 'green';
+        ctx2.beginPath();
+        ctx2.arc(150, 75, 50, 0, 2 * Math.PI);
+        ctx2.fill();
+      }
+
+      if (canvas3.getContext) {
+        const ctx3 = canvas3.getContext('2d');
+        ctx3.strokeStyle = 'red';
+        ctx3.lineWidth = 5;
+        ctx3.beginPath();
+        ctx3.moveTo(50, 25);
+        ctx3.lineTo(250, 25);
+        ctx3.lineTo(150, 125);
+        ctx3.closePath();
+        ctx3.stroke();
+      }
+
+      if (canvas4.getContext) {
+        const ctx4 = canvas4.getContext('2d');
+        let drawing = false;
+
+        canvas4.addEventListener('mousedown', (e) => {
+          drawing = true;
+          ctx4.beginPath();
+          ctx4.moveTo(
+            e.clientX - canvas4.getBoundingClientRect().left,
+            e.clientY - canvas4.getBoundingClientRect().top,
+          );
+        });
+
+        canvas4.addEventListener('mousemove', (e) => {
+          if (drawing) {
+            ctx4.lineTo(
+              e.clientX - canvas4.getBoundingClientRect().left,
+              e.clientY - canvas4.getBoundingClientRect().top,
+            );
+            ctx4.stroke();
+          }
+        });
+
+        canvas4.addEventListener('mouseup', () => {
+          drawing = false;
+          ctx4.closePath();
+        });
+
+        canvas4.addEventListener('mouseleave', () => {
+          drawing = false;
+          ctx4.closePath();
+        });
+      }
+    </script>
+  </body>
+</html>
