@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Картки</title>
+    <style>
+      :root {
+        --face-color: #1c1c1c;
+        --content-color: #fff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: linear-gradient(to bottom right, #ffa726, #ff9800);
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+      }
+
+      .card {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        perspective: 2400px;
+      }
+
+      .card .face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        display: flex;
+        transition: 0.8s ease;
+        backface-visibility: hidden;
+        background-color: var(--face-color);
+        box-shadow: 0 24px 24px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+      }
+
+      .card .backface {
+        transform: rotateY(180deg);
+      }
+
+      .card .content {
+        color: var(--content-color);
+        margin: auto;
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+
+      .card .content code {
+        font-size: 24px;
+      }
+
+      .card:hover .surface {
+        transform: rotateY(-180deg);
+      }
+
+      .card:hover .backface {
+        transform: rotateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Картки</h1>
+    </header>
+
+    <main class="cards">
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;!--...--&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає коментар</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;!DOCTYPE&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає тип документа</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;a&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає гіперпосилання</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;abbr&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає абревіатуру або акронім</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;address&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає контактну інформацію для автора/власника документа</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;area&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає область всередині карти зображення</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;article&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає статтю/пост</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;aside&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає вміст, окрім вмісту сторінки</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;audio&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає вбудований звуковий вміст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;b&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає жирний текст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;base&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Визначає базову URL-адресу/ціль для всіх відносних URL-адрес у
+              документі
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;bdi&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Виокремлює частину тексту, яка може бути відформатована в іншому
+              напрямку, від іншого тексту поза ним
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;bdo&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Перевизначає поточний напрямок тексту</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;blockquote&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає розділ, цитований з іншого джерела</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;body&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає тіло документа</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;br&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає один розрив рядка</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;button&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає кнопку, яку можна натиснути</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;canvas&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Використовується для малювання графіки на льоту за допомогою
+              сценаріїв (зазвичай JavaScript)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;caption&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає заголовок таблиці</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;cite&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає назву твору</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;code&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає частину комп’ютерного коду</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;col&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Визначає властивості стовпця для кожного стовпця в елементі
+              &lt;colgroup&gt;
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;colgroup&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Визначає групу з одного або кількох стовпців у таблиці для
+              форматування
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;data&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Додає машинозчитуваний переклад певного вмісту</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;datalist&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Визначає список попередньо визначених параметрів для елементів
+              керування введенням
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;dd&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає опис/значення терміна в списку описів</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;del&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає текст, який було видалено з документа</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;details&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>
+              Визначає додаткові деталі, які користувач може переглядати або
+              приховувати
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;dfn&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає термін, який буде визначено у вмісті</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;dialog&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає діалогове вікно або вікно</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;div&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає розділ у документі</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;dl&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає список описів</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;dt&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає термін/назву в списку описів</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;em&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає виділений текст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;embed&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає контейнер для зовнішньої програми</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;fieldset&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Групує пов’язані елементи у формі</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;figcaption&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає заголовок для елемента &lt;figure&gt;</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;figure&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає самодостатній вміст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;footer&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає нижній колонтитул для документа або розділу</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;form&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає HTML-форму для введення користувача</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;h1gt; до &lt;h6&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає заголовки HTML</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;head&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Містить метадані/інформацію про документ</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;header&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає заголовок для документа або розділу</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;hr&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає тематичну зміну змісту</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;html&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає корінь документа HTML</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;i&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає частину тексту іншим голосом або настроєм</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;iframe&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає вбудований фрейм</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;img&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає зображення</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;input&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає елемент керування введенням</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;ins&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає текст, який було вставлено в документ</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;kbd&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає введення з клавіатури</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;label&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає мітку для елемента <input /></p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;legend&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає заголовок для елемента &lt;fieldset&gt;</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;li&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає елемент списку</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;link&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає зв’язок між документом і зовнішнім ресурсом (найчастіше
+            використовується для посилань на таблиці стилів)
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;main&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає основний зміст документа</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;map&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає карту зображення</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;mark&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає позначений/виділений текст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;meta&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає метадані про документ HTML</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;meter&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає скалярне вимірювання у відомому діапазоні (калібр)</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;nav&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає навігаційні посилання</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;noscript&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає альтернативний вміст для користувачів, які не підтримують
+            сценарії на стороні клієнта
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;object&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає контейнер для зовнішньої програми</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;ol&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає впорядкований список</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;optgroup&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає групу пов’язаних параметрів у розкривному списку</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;option&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає параметр у розкривному списку</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;output&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає результат обчислення</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;p&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає абзац</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;param&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає параметр для об'єкта</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;picture&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає контейнер для кількох ресурсів зображень</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;pre&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає попередньо відформатований текст</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;progress&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Відображає хід виконання завдання</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;q&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає коротку цитату</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;rp&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає, що відображати в браузерах, які не підтримують анотації
+            ruby
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;rt&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає пояснення/вимову символів (для типографіки Східної Азії)
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;ruby&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає рубінову анотацію (для типографіки Східної Азії)</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;s&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає текст, який більше не є правильним</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;samp&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає вихідний зразок комп’ютерної програми</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;script&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає клієнтський сценарій</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;section&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає розділ у документі</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;select&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає розкривний список</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;small&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає менший текст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;source&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає кілька медіа-ресурсів для медіа-елементів (&lt;video&gt; і
+            &lt;audio&gt;)
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;span&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає розділ у документі</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;strong&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає важливий текст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;style&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає інформацію про стиль для документа</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;sub&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає текст із підписом</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;summary&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає видимий заголовок для елемента &lt;details&gt;</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;sup&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає текст із верхнім індексом</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;svg&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає контейнер для графіки SVG</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;table&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає таблицю</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;tbody&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Групує основний вміст у таблиці</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;td&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає клітинку в таблиці</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;template&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає контейнер для вмісту, який має бути прихований під час
+            завантаження сторінки
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;textarea&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає багаторядковий елемент керування введенням (текстова
+            область)
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;tfoot&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Групує вміст нижнього колонтитула в таблиці</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;th&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content">
+            <p>Визначає клітинку заголовка в таблиці</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;thead&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Групує вміст заголовка в таблиці</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;time&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>Визначає конкретний час (або дату і час)</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;title&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає назву для документа</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;tr&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає рядок у таблиці</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;track&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає текстові доріжки для медіа-елементів (&lt;video&gt; і
+            &lt;audio&gt;)
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;u&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"></div>
+          <p>
+            Визначає деякий текст, який є неартикульованим і має стиль,
+            відмінний від звичайного тексту
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;ul&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає невпорядкований список</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;var&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає змінну</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;video&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає вбудований відеовміст</p></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="face surface">
+          <div class="content">
+            <code>&lt;wbr&gt;</code>
+          </div>
+        </div>
+        <div class="face backface">
+          <div class="content"><p>Визначає можливий розрив рядка</p></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
