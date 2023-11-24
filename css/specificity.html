@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /* Specificity: 0 */
+      * {
+      }
+
+      /* Specificity: 1 */
+      button {
+      }
+
+      /* Specificity: 10 */
+      .section {
+      }
+
+      /* Specificity: 100 */
+      #textarea {
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Button</button>
+
+    <section class="section"></section>
+
+    <textarea id="textarea"></textarea>
+
+    <div style="/* Specificity: 1000 */"></div>
+
+    <input style="/* Specificity: 10000 */ display: inline !important" />
+  </body>
+</html>
