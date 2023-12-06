@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Demo</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .layout {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #444;
+        padding: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      section {
+        flex-basis: 70%;
+        background-color: #f4f4f4;
+        padding: 1rem;
+      }
+
+      aside {
+        flex-basis: 25%;
+        background-color: #ddd;
+        padding: 1rem;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <h1>Title</h1>
+      </header>
+
+      <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+      </nav>
+
+      <main>
+        <section>
+          <h2>Title 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae,
+            quia quisquam ratione optio neque mollitia nobis ex? Repellendus
+            libero autem omnis nesciunt, reprehenderit animi laudantium ipsa
+            maiores repudiandae fugiat rerum?
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            excepturi placeat voluptas iste ea sapiente doloribus, illo
+            blanditiis quasi quisquam maxime laborum, perferendis facilis iure
+            sit fuga accusantium molestias voluptatibus.
+          </p>
+        </section>
+
+        <aside>
+          <h2>Sidebar</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+            sunt quod ipsam consequuntur rerum velit laborum suscipit qui.
+            Porro, reprehenderit inventore! Quas consequatur eveniet quo illum
+            quaerat, debitis amet quibusdam.
+          </p>
+        </aside>
+      </main>
+
+      <footer>
+        <p>&copy; Copyright. Year.</p>
+      </footer>
+    </div>
+  </body>
+</html>
