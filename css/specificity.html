@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Specificity</title>
     <style>
+      #section {
+        font-size: 40px;
+      }
+    </style>
+    <style>
       /* Specificity: 0 */
+      .section {
+        background-color: gold;
+      }
+
       * {
+        border-width: 10px;
+        box-sizing: border-box;
       }
 
       /* Specificity: 1 */
-      button {
+      button:focus {
+        background-color: green;
       }
 
       /* Specificity: 10 */
+      section {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-width: 10px;
+        border-color: gold;
+        border-style: solid;
+        padding: 10px;
+        margin: 2cm;
+      }
+
       .section {
+        font-size: 20px;
       }
 
       /* Specificity: 100 */
@@ -24,14 +48,34 @@
   </head>
 
   <body>
-    <button>Button</button>
+    <button autofocus="true">Button</button>
 
-    <section class="section"></section>
+    <section class="section" id="section">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+      tempore, ab aperiam dolorem cupiditate provident consequuntur nobis
+      officiis tempora iure corporis sequi modi, ratione inventore nemo autem
+      eum officia nam.
+    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+      consequuntur nulla repellendus accusamus doloremque, rem illum quas, ipsum
+      rerum nihil commodi fuga at, eum perferendis ab nemo voluptate labore
+      numquam?
+    </p>
 
     <textarea id="textarea"></textarea>
 
     <div style="/* Specificity: 1000 */"></div>
 
-    <input style="/* Specificity: 10000 */ display: inline !important" />
+    <input
+      type="color"
+      style="/* Specificity: 10000 */ display: inline !important"
+    />
+
+    <style>
+      .section {
+        font-size: 30px;
+      }
+    </style>
   </body>
 </html>
