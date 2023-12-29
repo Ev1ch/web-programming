@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('base.css');
+
+body {
+  counter-reset: section;
+}
+
+.container {
+  width: 505px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-1,
+.title-2,
+.title-3 {
+  color: var(--dark-color);
+}
+
+.header {
+  text-align: center;
+}
+
+.header__container {
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--lighter-color);
+}
+
+.header__information {
+  margin-bottom: 3rem;
+}
+
+.header__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 1.1rem;
+  background-color: var(--light-color);
+}
+
+.header__title {
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.header__address {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact__description {
+  margin-left: 0.8rem;
+  font-size: 1rem;
+}
+
+.main {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.main > * + * {
+  margin-top: 3rem;
+}
+
+.section__container {
+  display: grid;
+  grid-template-columns: 154px auto;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section__title::before {
+  content: '0' counter(section);
+  counter-increment: section;
+  margin-right: 0.4rem;
+}
+
+.companies > * + * {
+  margin-top: 1.5rem;
+}
+
+.company__name {
+  margin-bottom: 0.4rem;
+}
+
+.company__position {
+  margin-bottom: 0.5rem;
+}
+
+.company__date {
+  margin-bottom: 0.8rem;
+}
+
+.company__achivements {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.company__achivements > * + * {
+  margin-top: 0.4rem;
+}
+
+.company__achivement::before {
+  content: '•';
+  margin-right: 0.8rem;
+}
+
+.instance__name {
+  margin-bottom: 0.4rem;
+}
+
+.badges {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.badges__item {
+  padding: 0.4rem 0.8rem;
+  color: var(--dark-color);
+  border-radius: 1.5rem;
+  background-color: var(--accent-color);
+}
+
+.languages {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.languages__item:not(:first-of-type)::before {
+  content: '|';
+  margin-right: 0.8rem;
+}
+
+.languages__level {
+  font-style: italic;
+}
+
+.links {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.links__item:not(:first-of-type)::before {
+  content: '|';
+  margin-right: 0.8rem;
+}
+
+.links__link {
+  text-decoration: none;
+  color: var(--light-color);
+}
