@@ -1,0 +1,9 @@
+:root {
+  --light-color: #fff;
+  --background-color: #f2f2f2;
+  --dark-color-100: #252525;
+  --dark-color-80: #252525cc;
+  --dark-color-70: #252525b3;
+  --accent-font-family: 'Poppins', sans-serif;
+  --font-family: 'Avenir', sans-serif;
+}

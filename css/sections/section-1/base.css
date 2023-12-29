@@ -1,0 +1,24 @@
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+  color: var(--dark-color-100);
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 5.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h1,
+h2,
+button {
+  font-family: var(--accent-font-family);
+}
