@@ -1,7 +1,7 @@
 html {
   font-size: 62.5%;
   font-family: var(--font-family);
-  color: var(--light-100);
+  color: var(--light-color);
 }
 
 h1 {
