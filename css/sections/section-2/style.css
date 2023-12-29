@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('base.css');
+
+.container {
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  padding-top: 11rem;
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__decorator {
+  width: 35.5rem;
+  height: 30rem;
+}
+
+.header__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--dark-color-100);
+}
+
+.header__content {
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__title {
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.header__description {
+  margin-bottom: 2.4rem;
+}
+
+.header__button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  color: var(--light-color);
+  background-color: var(--dark-color-100);
+  border-radius: 2.4rem;
+  font-family: var(--accent-font-family);
+  font-size: 1.6rem;
+}
+
+.products {
+  margin-bottom: 6.4rem;
+}
+
+.fashion {
+  display: flex;
+  column-gap: 2.4rem;
+}
+
+.fashion__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+
+.fashion__description--1 {
+  margin-bottom: 4.8rem;
+}
+
+.fashion__description--2 {
+  margin-left: auto;
+  margin-top: 1.6rem;
+}
+
+.fashion__cell {
+  overflow: hidden;
+  border-radius: 1.6rem;
+}
+
+.fashion__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--dark-color-100);
+}
+
+.fashion__cell--1 {
+  width: 18rem;
+  height: 25rem;
+}
+
+.fashion__cell--2 {
+  width: 25.7rem;
+  height: 27.3rem;
+}
+
+.fashion__cell--3 {
+  width: 25.7rem;
+  height: 25.2rem;
+}
+
+.fashion__cell--4 {
+  width: 29.2rem;
+  height: 58.2rem;
+}
+
+.fashion__cell--5 {
+  margin-top: auto;
+  width: 25.7rem;
+  height: 27.3rem;
+}
+
+.fashion__cell--6 {
+  width: 25.7rem;
+  height: 25.2rem;
+}
+
+.fashion__cell--7 {
+  margin-top: auto;
+  width: 18rem;
+  height: 25rem;
+}
+
+.fashion__list {
+  font-size: 2.8rem;
+  font-style: italic;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2.4rem;
+  line-height: 4.8rem;
+}
+
+.fashion__list--bigger {
+  font-size: 3.2rem;
+}
+
+.fashion__divider {
+  height: 0.6rem;
+  background-color: var(--dark-color-100);
+}
