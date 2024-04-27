@@ -44,6 +44,7 @@
         height: 200px;
         position: relative;
         perspective: 2400px;
+        cursor: pointer;
       }
 
       .card .face {
@@ -76,14 +77,31 @@
         font-size: 24px;
       }
 
-      .card:hover .surface {
+      .card.active .surface {
         transform: rotateY(-180deg);
       }
 
-      .card:hover .backface {
+      .card.active .backface {
         transform: rotateY(0);
       }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach((card) => {
+          card.addEventListener('click', () => {
+            const activeCards = document.querySelectorAll('.card.active');
+            activeCards.forEach((activeCard) => {
+              if (activeCard !== card) {
+                activeCard.classList.remove('active');
+              }
+            });
+            card.classList.toggle('active');
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -698,7 +716,7 @@
             </div>
             <div class="face backface">
               <div class="content">
-                <p>Визначає мітку для елемента <input /></p>
+                <p>Визначає мітку для елемента</p>
               </div>
             </div>
           </div>
@@ -731,11 +749,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає зв’язок між документом і зовнішнім ресурсом (найчастіше
-                використовується для посилань на таблиці стилів)
-              </p>
+              <div class="content">
+                <p>
+                  Визначає зв’язок між документом і зовнішнім ресурсом
+                  (найчастіше використовується для посилань на таблиці стилів)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -791,8 +810,11 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає скалярне вимірювання у відомому діапазоні (калібр)</p>
+              <div class="content">
+                <p>
+                  Визначає скалярне вимірювання у відомому діапазоні (калібр)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -812,11 +834,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає альтернативний вміст для користувачів, які не
-                підтримують сценарії на стороні клієнта
-              </p>
+              <div class="content">
+                <p>
+                  Визначає альтернативний вміст для користувачів, які не
+                  підтримують сценарії на стороні клієнта
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -826,8 +849,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає контейнер для зовнішньої програми</p>
+              <div class="content">
+                <p>Визначає контейнер для зовнішньої програми</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -847,8 +871,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає групу пов’язаних параметрів у розкривному списку</p>
+              <div class="content">
+                <p>Визначає групу пов’язаних параметрів у розкривному списку</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -900,8 +925,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає контейнер для кількох ресурсів зображень</p>
+              <div class="content">
+                <p>Визначає контейнер для кількох ресурсів зображень</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -911,8 +937,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає попередньо відформатований текст</p>
+              <div class="content">
+                <p>Визначає попередньо відформатований текст</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -944,11 +971,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає, що відображати в браузерах, які не підтримують
-                анотації ruby
-              </p>
+              <div class="content">
+                <p>
+                  Визначає, що відображати в браузерах, які не підтримують
+                  анотації ruby
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -958,11 +986,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає пояснення/вимову символів (для типографіки Східної
-                Азії)
-              </p>
+              <div class="content">
+                <p>
+                  Визначає пояснення/вимову символів (для типографіки Східної
+                  Азії)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -972,8 +1001,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає рубінову анотацію (для типографіки Східної Азії)</p>
+              <div class="content">
+                <p>Визначає рубінову анотацію (для типографіки Східної Азії)</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -983,8 +1013,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає текст, який більше не є правильним</p>
+              <div class="content">
+                <p>Визначає текст, який більше не є правильним</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -994,8 +1025,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає вихідний зразок комп’ютерної програми</p>
+              <div class="content">
+                <p>Визначає вихідний зразок комп’ютерної програми</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1045,11 +1077,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає кілька медіа-ресурсів для медіа-елементів
-                (&lt;video&gt; і &lt;audio&gt;)
-              </p>
+              <div class="content">
+                <p>
+                  Визначає кілька медіа-ресурсів для медіа-елементів
+                  (&lt;video&gt; і &lt;audio&gt;)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1079,8 +1112,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає інформацію про стиль для документа</p>
+              <div class="content">
+                <p>Визначає інформацію про стиль для документа</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1100,8 +1134,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає видимий заголовок для елемента &lt;details&gt;</p>
+              <div class="content">
+                <p>Визначає видимий заголовок для елемента &lt;details&gt;</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1165,11 +1200,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає контейнер для вмісту, який має бути прихований під час
-                завантаження сторінки
-              </p>
+              <div class="content">
+                <p>
+                  Визначає контейнер для вмісту, який має бути прихований під
+                  час завантаження сторінки
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1179,11 +1215,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає багаторядковий елемент керування введенням (текстова
-                область)
-              </p>
+              <div class="content">
+                <p>
+                  Визначає багаторядковий елемент керування введенням (текстова
+                  область)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1193,8 +1230,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Групує вміст нижнього колонтитула в таблиці</p>
+              <div class="content">
+                <p>Групує вміст нижнього колонтитула в таблиці</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1226,8 +1264,9 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>Визначає конкретний час (або дату і час)</p>
+              <div class="content">
+                <p>Визначає конкретний час (або дату і час)</p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1257,11 +1296,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає текстові доріжки для медіа-елементів (&lt;video&gt; і
-                &lt;audio&gt;)
-              </p>
+              <div class="content">
+                <p>
+                  Визначає текстові доріжки для медіа-елементів (&lt;video&gt; і
+                  &lt;audio&gt;)
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -1271,11 +1311,12 @@
               </div>
             </div>
             <div class="face backface">
-              <div class="content"></div>
-              <p>
-                Визначає деякий текст, який є неартикульованим і має стиль,
-                відмінний від звичайного тексту
-              </p>
+              <div class="content">
+                <p>
+                  Визначає деякий текст, який є неартикульованим і має стиль,
+                  відмінний від звичайного тексту
+                </p>
+              </div>
             </div>
           </div>
           <div class="card">
